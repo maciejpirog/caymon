@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Pacifico" rel="stylesheet">
+    <script language="javascript" src="rts.js"></script>
+    <script language="javascript" src="lib.js"></script>
+    <script language="javascript" src="out.js"></script>
+    <script language="javascript" src="prism.js"></script>
+  </head>
+  <body>
+
+    
+<div class="menux">
+  <a class="menuitem" href="index.html">CayMon's home</a>
+  <a class="menuitem" href="tutorial.html">Tutorial</a>
+  <a class="menuitem menusel" href="caymon.html">Try it in browser</a>
+  <a class="menuitem" href="https://github.com/maciejpirog/caymon">Source</a>
+</div>
+
+    <div class="cont">
+
+
+      <div class="header">
+	<img src="logo.png">
+	<h2 id="hd">Try CayMon in browser</h2>
+      </div>
+
+
+
+      <div class="polyDiv" id="polyDiv">
+	Enter a polynomial, for example "3*x^2 + 2*x + x^4 + x + 10".<br>(It's better to start off with something simple, like "x^2 + x".)
+	<form class="polyForm">
+	  <input type="text" id="polyBox" value="x^2 + x" class="polyInput">
+	  <input type="button" value="Go!" onClick="go();" class="goButton">
+	</form>
+      </div>
+
+      <div class="loaderDivC" id="loaderDiv" style="display:none;">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <script>
+      function fontsize(elem, delta) {
+    txt = document.getElementById(elem);
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + delta) + 'px';
+	}
+</script>
+      
+      <div class="wideCode" id="againDiv" style="display:none;">
+        <form class="polyForm">
+	  <a onClick="location.reload();" class="goButton">Try again</a>
+	  <a onClick="fontsize('codeBox',2);" class="regButton">+</a>
+	  	  <a onClick="fontsize('codeBox',-2);" class="regButton">-</a>
+	  <a onClick="document.getElementById('codeBoxx').className = reverse(document.getElementById('codeBoxx').className);document.getElementById('againDiv').className = reverse(document.getElementById('againDiv').className);" class="regButton">&lt;-- Widen --&gt;</a>
+	  <a id="a2" download="Download.hs" type="text" class="regButton">Download as .hs file</a>
+	  <a class="regButton" id="copyButton"><span class="hiddenCheck" id="copyButtonCheck">✔ </span><span id="copyButtonText">Copy to clipboard</span></a>
+	  	  <a class="regButton" id="selectButton" onClick="selectText('codeBox');">Select all</a>
+	</form>
+      </div>
+    
+
+    <div class="wideCode" id="codeBoxx">
+      <pre id="preCode" style="display:none;"><code id="codeBox" class="language-haskell"></code></pre>
+    </div>
+
+    <div class="cont">
+      <p  id="jscaymonInfo">
+	Note that the web version of Caymon is compiled from (an older
+	version) of its Haskell source using the <a href="https://github.com/ghcjs/ghcjs">ghcjs</a> compiler. This
+	version is somewhat limited, as the current <a href="">Haskell
+	version</a> can additionally produce Haddock documentation and
+	QuickCheck tests to check some of the properties of the
+	generated data structures.
+	<p>
+      </div>
+  </body>
+  <script language="javascript">
+    function reverse(str) {
+      return str.split("").reverse().join("");
+    }
+    function selectText(containerid) {
+     if (document.selection) {
+         var range = document.body.createTextRange();
+         range.moveToElementText(document.getElementById(containerid));
+         range.select();
+      } else if (window.getSelection) {
+         var range = document.createRange();
+         range.selectNode(document.getElementById(containerid));
+         window.getSelection().addRange(range);
+      }
+    }
+    function getData()
+    {
+      return document.getElementById("polyBox").value;
+    }
+    function setData(str)
+    {
+      document.getElementById("loaderDiv").style.display = "none";
+      document.getElementById("jscaymonInfo").style.display = "none";
+      document.getElementById("preCode").style.display = "block";
+      document.getElementById("codeBox").innerHTML = str;
+      document.getElementById("againDiv").style.display = "block";
+      Prism.highlightAll();
+      // set up download button
+      var x = "-- Generated with Caymon v 1.0 (https://pl-uwr.bitbucket.io/caymon)\n\n"
+      var data = new Blob([x + str]);
+      var a2 = document.getElementById("a2");
+      a2.href = URL.createObjectURL(data);
+      // set up copy to clipboard
+      document.getElementById("copyButton").onclick = function ()
+      { if (document.execCommand("copy"))
+          {document.getElementById("copyButtonText").innerHTML="Copied successfully";
+          document.getElementById("copyButtonCheck").className="visibleCheck";
+        }
+        else
+        {alert ("Cannot copy to clipboard :("); }
+      }
+    }
+    function go()
+    {
+    document.getElementById("polyDiv").style.display = "none";
+    document.getElementById("loaderDiv").style.display = "block";
+    h$main(h$mainZCZCMainzimain);
+    }
+  </script>
+  <!-- script language="javascript" src="runmain.js" defer></script -->
+</html>

@@ -1,0 +1,53 @@
+name:                caymon
+version:             0.1.0.0
+github:              "githubuser/caymon"
+license:             MIT
+author:              "Maciej Pirog"
+maintainer:          "maciej.adam.pirog@gmaile.com"
+copyright:           "2018 Maciej Pirog"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/caymon#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- directory
+- process
+- ansi-terminal
+- QuickCheck
+- generic-random
+
+library:
+  source-dirs: src
+
+executables:
+  caymon:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - caymon
+
+tests:
+  caymon-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - caymon

@@ -1,0 +1,334 @@
+.loader {
+    display:inline-block;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loaderDivC
+{
+    margin-top:2em;
+    text-align:center;
+}
+
+a
+{
+    color:#27c;
+    text-decoration:none;
+}
+a:hover
+{
+    color:#d33;
+}
+
+html
+{
+overflow-y:scroll;
+}
+
+body
+{   margin:0;
+    color:#333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.polyDiv
+{
+    margin-top:2em;
+    text-align:center;
+    font-size:1em;
+    xbackground-color:#efefaa;
+    background-color:#f5f2f0;
+    max-width:970px;
+    padding:1.5em 1em 1em 1em;
+    border-radius:6px;
+    xborder:solid 1px #cc8;
+    border:solid 1px #c5c2c0;
+}
+.polyInput
+{
+    border:solid 1px #cc8;
+    padding:10px;
+    border-radius:6px;
+    background-color:#ffe
+}
+.goButton
+{
+    border-radius:6px;
+    padding:10px 23px;
+    border-left:solid 1px #16b;
+    border-top:solid 1px #16b;
+    border-right:solid 1px #16b;
+    border-bottom:solid 1px #16b;
+    cursor:pointer;
+    background-color:#27c;
+    color:white;
+}
+.goButton:hover
+{
+    background-color:#49d;
+    color:white;
+}
+.goButton:active
+{
+    background-color:#fa9;
+}
+.regButton
+{
+    xbackground-color:#ff8;
+    border-radius:6px;
+    padding:10px 23px;
+    border-left:solid 1px #689;
+    border-top:solid 1px #689;
+    border-right:solid 1px #689;
+    border-bottom:solid 1px #689;
+    cursor:pointer;
+    background-color:#79a;
+    color:white;
+}
+.regButton:hover
+{
+    background-color:#8ab;
+    color:white;
+}
+.regButton:active
+{
+    background-color:#fa9;
+}
+.successButton
+{
+    background-color:#5c0;
+}
+#preCode
+{
+   border-radius:6px;
+   xborder:solid 1px #cc8;
+   border:solid 1px #c5c2c0;
+}
+
+.menux
+{
+    text-align:center;
+    width:100%;
+    background-color:#2c89a0;
+    margin-bottom:2em;
+    padding: 0em 0;
+    display:block;
+}
+.menuitem
+{
+    padding:0.75em 1em;
+    display:inline-block;
+    color:#e9e9e9;
+}
+.menuitem
+{
+   color:#e9e9e9;
+}
+.menuitem:hover
+{
+  color:#ffffff;
+  xbackground-color:#2f8faf;
+}
+.menusel
+{
+    background-color:#00aad4;
+    color:white;
+}
+
+#againDiv
+{
+    font-size:1em;
+    margin-top:3em;
+}
+
+.header
+{
+    text-align:center;
+}
+
+.polyForm
+{
+    margin:1em 0;
+}
+
+input
+{
+    font-size:1em;
+}
+
+h1
+{
+  font-family: 'Pacifico', cursive; font-size:5.5em; margin:0px 0 20px 0;
+}
+
+h2
+{
+    font-family: 'Pacifico', cursive; font-size:3em; margin:0px 0 0px 0;
+  xfont-family: 'M PLUS Rounded 1c', sans-serif; font-size:3em; margin:0px 0 0px 0;
+}
+
+h3
+{
+  font-family: 'Pacifico', cursive; font-size:2em;
+}
+    
+
+.croc
+{
+    xfont-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+
+.cont
+{
+    max-width:970px;
+    margin:0px auto;
+    xbackground-color:yellow;
+}
+.mainCont
+{
+    margin-top:3em;
+}
+.wideCode
+{
+    max-width:970px;
+    margin:0px auto;  
+}
+.edoCediw
+{
+    width:100%;
+}
+
+#jscaymonInfo
+{
+    margin-top:3em;
+    xfont-size:0.9em;
+    padding: 0 30px;
+    xbackground-color:pink;
+}
+
+.hiddenCheck
+{
+    display:none;
+}
+.visibleCheck
+{
+    display:inline;
+}
+
+.theorem
+{
+    border-left: 10px solid coral;
+    font-family:serif;
+    padding-left:10px;
+}
+
+
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ * Licensed under the MIT License
+ *
+ * Sass/SCSS source: https://goo.gl/8hncj
+ * PSD by Liam McCabe: https://goo.gl/md3Dj
+ */
+
+
+.notepaper {
+  position: relative;
+  margin: 30px auto;
+  padding: 29px 20px 20px 45px;
+  width: 690px;
+  xline-height: 30px;
+  color: #6a5f49;
+  text-shadow: 0 1px 1px white;
+  background-color: #f2f6c1;
+  background-image: -webkit-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -webkit-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -moz-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -moz-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -o-radial-gradient(center, cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 90%), -o-repeating-linear-gradient(top, transparent 0%, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  border: 1px solid #c3baaa;
+  border-color: rgba(195, 186, 170, 0.9);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+}
+
+
+.notepaper:before, .notepaper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.notepaper:before {
+  left: 28px;
+  width: 2px;
+  border: solid #efcfad;
+  border-color: rgba(239, 207, 173, 0.9);
+  border-width: 0 1px;
+}
+
+.notepaper:after {
+  z-index: -1;
+  left: 0;
+  right: 0;
+  background: rgba(242, 246, 193, 0.9);
+  border: 1px solid rgba(170, 157, 134, 0.7);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.quote {
+  xfont-family: Georgia, serif;
+  xfont-size: 14px;
+}
+
+.curly-quotes:before, .curly-quotes:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: .2;
+}
+/*
+.curly-quotes:before {
+  content: '\201C';
+  margin-right: 4px;
+  margin-left: -8px;
+}
+
+.curly-quotes:after {
+  content: '\201D';
+  margin-left: 4px;
+  margin-right: -8px;
+}
+*/
+.quote-by {
+  display: block;
+  padding-right: 10px;
+  text-align: right;
+  xfont-size: 13px;
+  xfont-style: italic;
+  color: #84775c;
+}
+
+.lt-ie8 .notepaper {
+  padding: 15px 25px;
+}
+
