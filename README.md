@@ -23,8 +23,8 @@ Equational theories and monads from polynomial Cayley representations](http://ww
 
 ## Be warned!
 
-- CayMon is a research-level exploratory software. Reading its source code might help you understand some details, but its overall internal chaos will give you a headache. Read source code responsibly! It is because caymon is not an implementation of the algorithm described in the paper, but the paper is a result of a series of experiments that resulted in the code in this repo (and heavy QuickChecking)!
+- :warning: CayMon is a research-level exploratory software. Reading its source code might help you understand some details, but its overall internal chaos will give you a headache. Read source code responsibly! It is because caymon is not an implementation of the algorithm described in the paper, but the paper is a result of a series of experiments that resulted in the code in this repo (and heavy QuickChecking)!
 
-- Stack no longer supports GHCJS, so you won't build jscaymon with `stack build`. We'll need to port it to nix, but not before the release of caymon 2.0, which is coming sooner or later.
+- :warning: Stack no longer supports GHCJS, so you won't build jscaymon with `stack build`. We'll need to port it to nix, but not before the release of caymon 2.0, which is coming sooner or later.
 
-- The tutorial is not really fished yet.
+- :warning: The tutorial is not really fished yet.
