@@ -2,9 +2,9 @@
 
 A tool to generate Haskell monads from polynomial Cayley representations.
 
-![Caymon logo](https://github.com/maciejpirog/caymon/raw/master/website/logo.png)
+[![Caymon logo](https://github.com/maciejpirog/caymon/raw/master/website/logo.png)](https://pl-uwr.bitbucket.io/caymon/)
 
-Try it in browser at [https://pl-uwr.bitbucket.io/caymon/](https://pl-uwr.bitbucket.io/caymon/)
+Try it in browser: [https://pl-uwr.bitbucket.io/caymon/caymon.html](https://pl-uwr.bitbucket.io/caymon/caymon.html)
 
 You give it a polynomial, it gives you back:
 
