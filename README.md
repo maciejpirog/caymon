@@ -17,8 +17,8 @@ Equational theories and monads from polynomial Cayley representations](http://ww
 
 ## In this repository
 
-- A Haskell program that generates a .hs files + haddock docs,
-- A port to JavaScript with GHCJS
+- A Haskell program that generates .hs files + haddock docs,
+- A port to JavaScript vis GHCJS
 - A website that uses the above (together with a tutorial)
 
 ## Be warned!
